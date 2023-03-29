@@ -1,0 +1,74 @@
+
+1. What type would you choose for the following “numbers”?
+A person’s telephone number   
+**Answer: string
+A person’s height     
+**Answer: decimal
+A person’s age	
+**Answer: int
+A person’s gender (Male, Female, Prefer Not To Answer)
+**Answer: enum
+A person’s salary
+**Answer: decimal
+A book’s ISBN
+**Answer: string
+A book’s price
+**Answer: decimal
+A book’s shipping weight:
+**Answer: decimal
+A country’s population
+**Answer: long
+The number of stars in the universe:
+**Answer: long
+The number of employees in each of the small or medium businesses in the
+United Kingdom (up to about 50,000 employees per business)
+**Answer: int
+2. What are the difference between value type and reference type variables?
+**Answer: In C #, value type refers to data type that stored the value directly, which 
+means a copy of the value is made when you create a value type. The exmples include:
+int, float, double, long , bool , enum .etc; However, the reference type store a reference 
+to an object in the computer memory. When a reference type variable is assigned to another
+variable, the reference to the object is copied, not the object itself. The examples include:
+class objects, interfaces, Arrays, Delegates. The key differences are: 1. memory location : value
+type are allocated on the stack ,while reference types are allocated on the heap; 2. Default value:
+value type have default value but reference type doesn't have; 3. assignment behavior: when a value
+type is assigned to a new variable, a copy of the value is made. When a reference type is assigned to a 
+new variable, a copy of the reference is made.
+3. What happens when you divide an int variable by 0?
+**Answer:it will raise a runtime error. To avoid this , we can add a conditional check before doing this operation.
+4. What happens when you divide a double variable by 0?
+**Answer:it will raise a runtime error. To avoid this , we can add a conditional check before doing this operation.
+5. What happens when you overflow an int variable, that is, set it to a value beyond its
+range?
+**Answer: In C#, it will resull in a sperical value called "infinity". This value represents a mathmatical concept of
+an infinitely large positive or negative number depends on you divide a postitive number by 0 or negative number. 
+6. What is the difference between x = y++; and x = ++y;?
+**Answer:
+x= y++ means assign the value of y to x first and then perform add 1 to y;
+x= ++y means perform add 1 operation to y first and then assign the value of y to x;
+7. What is the difference between break, continue, and return when used inside a loop
+statement?
+**Answer: 
+"break" : When 'break' is used inside a loop, it immediately exits the loop and moves 
+to the next line of code after the loop. 
+'continue': When 'continue' is used inside a loop, it skips the remaining code in the loop 
+and moves on to the next iteration.
+'return': When return is used inside a loop, it immediately exits both the loop and the 
+current method or function that contains the loop.
+
+8. What are the three parts of a for statement and which of them are required?
+**Answer: A for statement has three parts: initialization, condition, iterator
+initialization: it is used to initialize the loop counter vatiable. it is optional, 
+omitted, the loop counter will start at zero.
+Condition: it is the boolean expression that evaluated at the beginning of each loop iteration
+to decide when to stop the loop. it is required. 
+iterator: it is used to update the counter after each iteration. it is optinal an can be omitted if the 
+counter is updated in the loop. 
+
+
+
+
+
+
+
+
