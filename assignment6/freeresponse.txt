@@ -1,0 +1,155 @@
+1.. What are the six combinations of access modifier keywords and what do they do? 
+
+Answer:
+In C# here are five access modifier keywords that are used to specify the accessibility of types and 
+type members;1.Public: A public member or type is accessible from anywhere within the same assembly or 
+any other assembly that references it.2.Private: A private member or type is only accessible from 
+within the same class or struct. 3.Protected: A protected member or type is accessible from within the 
+same class or struct, or from any derived class or struct. 4.Internal: An internal member or type is 
+only accessible from within the same assembly.5.Protected internal: A protected internal member or 
+type is accessible from within the same assembly or from any derived class, regardless of whether the 
+derived class is in the same assembly or another assembly.6.when no access modifier keyword is specified, 
+which is equivalent to using the internal access modifier. This means that the type or member is only 
+accessible from within the same assembly.
+
+2.What is the difference between the static, const, and readonly keywords when applied to a type member?
+
+Answer:
+"static": 1.A static member is shared across all instances of a type and can be accessed through the type 
+itself rather than an instance.2. static members are initialized only once, when the type is first accessed,
+and they maintain their values throughout the life of the application.3.static keyword can be applied to fields, 
+methods, properties, events, constructors, and classes.
+"const": 1.A const member is a compile-time constant that is implicitly static and cannot be changed.2.const 
+keyword can only be applied to fields and must be initialized with a constant expression.3.const members are
+resolved at compile-time and their values cannot be changed at runtime.
+"readonly":1.A readonly member is an instance variable that can only be assigned a value in a constructor or 
+at the point of declaration.2.readonly keyword can be applied to fields only.3.readonly members can be 
+initialized at runtime, but once initialized, their values cannot be changed.
+In summary, static members are shared across all instances and maintain their values throughout the application 
+lifetime, const members are compile-time constants that cannot be changed, and readonly members are instance 
+variables that can only be assigned a value in a constructor or at the point of declaration and their values 
+cannot be changed once initialized.
+
+3. What does a constructor do?
+
+Answer:
+A constructor is a special method that is called when an object is created from a class. It is used to 
+initialize the fields of an object when it is created.In C#, a constructor is declared with the same name 
+as the class, and does not have a return type. It can have parameters, which are used to initialize the 
+fields of the object being created. Constructors can be overloaded, meaning that a class can have multiple 
+constructors with different parameter lists. When an object is created, the appropriate constructor is
+called based on the arguments passed to it.
+
+4. Why is the partial keyword useful?
+
+Answer:
+The partial keyword in C# allows a class, struct, or interface to be split into multiple files. 
+This means that you can define different parts of the class in separate files, which can be useful
+in large projects where multiple developers are working on the same codebase.
+By using the partial keyword, each file can contain a different part of the class, but when compiled,
+the compiler will treat them as if they were a single file. This makes it easier to manage large and 
+complex classes by breaking them down into smaller, more manageable pieces.
+
+5. What is a tuple?
+
+Answer:
+In C#, a tuple is a data structure that allows you to combine multiple elements of different types 
+into a single object. It is similar to an array or a list, but with a fixed number of elements and 
+each element can have a different type.
+
+6. What does the C# record keyword do?
+Answer:
+The record keyword in C# is used to define a new reference type that provides built-in functionality
+for value-based equality, immutable data, and deconstruction. It is similar to a class in C#, but with
+a simplified syntax and some additional features.
+
+
+
+7. What does overloading and overriding mean?
+Answer:
+Overloading and overriding are both concepts in object-oriented programming that allow for the creation 
+of multiple methods with the same name.Overloading refers to the practice of defining multiple methods 
+with the same name but different parameter lists. This allows you to create methods that perform similar 
+operations but take different types or numbers of parameters. When you call an overloaded method, the 
+compiler uses the parameter list to determine which version of the method to call.Overriding, on the other hand,
+refers to the practice of creating a method in a subclass that has the same signature (i.e., name and parameter list) 
+as a method in its superclass. This allows you to provide a new implementation for a method that already exists in 
+the superclass. When you call an overridden method on an instance of the subclass, the new implementation in the
+subclass is executed instead of the original implementation in the superclass.In summary, overloading allows you 
+to define multiple methods with the same name but different parameter lists, while overriding allows you to create 
+a new implementation for a method that already exists in a superclass.
+
+
+8. What is the difference between a field and a property?
+Answer:
+In C#, a field is a variable that belongs to an object of a class and holds its state. It is declared inside a class 
+but outside any method, and it is accessible throughout the class.A property, on the other hand, provides a mechanism 
+to expose private fields to the outside world. It is a member of a class that provides a flexible way to read, write, 
+or compute the value of a private field. Properties are declared using a get/set accessor pair, which allows you to 
+read and write the value of the underlying field, respectively.In summary, fields represent data stored inside a 
+class, while properties provide controlled access to this data, with logic that can perform additional operations 
+such as validation, error-checking, and lazy-loading.
+
+9. How do you make a method parameter optional?
+
+Answer:
+In C#, you can make a method parameter optional by providing a default value for the parameter. This allows the caller 
+to omit the argument for the optional parameter, and the method will use the default value instead.
+
+
+10. What is an interface and how is it different from abstract class?
+Answer:
+
+In C#, an interface is a contract that defines a set of methods, properties, and events that a class must 
+implement. An interface provides a way to enforce a particular behavior on the class that implements it. 
+An interface does not contain any implementation, but only specifies the signatures of methods, properties, 
+and events that the implementing class must define.
+An abstract class, on the other hand, is a class that cannot be instantiated and is meant to be used as a 
+base class for other classes. An abstract class can contain both abstract and non-abstract methods, 
+properties, and events. Abstract methods do not have an implementation and must be defined in the derived classes. 
+Non-abstract methods can be defined in the abstract class and can be called by the derived classes.
+The main difference between an interface and an abstract class is that a class can implement multiple interfaces, 
+but can inherit only from one abstract class. Additionally, an interface cannot define any fields, while an abstract 
+class can define fields along with methods, properties, and events.
+
+11. What accessibility level are members of an interface?
+
+Answer:
+In C#, all members of an interface are implicitly public and abstract, and do not have any access modifiers. 
+This means that all members of an interface are accessible to any code that can access the interface. Any class 
+that implements the interface must provide an implementation for all of its members, using the access modifier 
+appropriate for the implementing class.
+
+12. True/False. Polymorphism allows derived classes to provide different implementations
+of the same method.
+True
+13. True/False. The override keyword is used to indicate that a method in a derived class is
+providing its own implementation of a method.
+True
+14. True/False. The new keyword is used to indicate that a method in a derived class is
+providing its own implementation of a method.
+False
+15. True/False. Abstract methods can be used in a normal (non-abstract) class. 
+Ture
+16.True/False. Normal (non-abstract) methods can be used in an abstract class. 
+False. Abstract methods can only be used in an abstract class.
+17. True/False.Derived classes can override methods that were virtual in the base class. 
+True
+18. True/False.Derived classes can override methods that were abstract in the base class. 
+True
+19. True/False.In a derived class, you can override a method that was neither virtual non abstract in the
+base class.
+False. To be able to override a method in a derived class, the method in the base class must either be virtual or abstract.
+20. True/False. A class that implements an interface does not have to provide animplementation for all of the members of the interface.
+False.A class that implements an interface must provide an implementation for all of the members of the interface.
+21. True/False. A class that implements an interface is allowed to have other members thataren’t defined in the interface.
+True
+22. True/False. A class can have more than one base class.
+True. 
+23. True/False. A class can implement more than one interface.What is meant by the terms managed resource and unmanaged resource in
+True
+24. What's the purpose of Garbage Collector in .NET?
+The purpose of the Garbage Collector in .NET is to automatically manage memory by tracking objects that are no longer being used by the 
+application and freeing up their allocated memory so it can be reused. The Garbage Collector periodically checks the memory heap for
+objects that are no longer referenced by any part of the application and releases their memory. This helps to prevent memory leaks and 
+improve the performance and reliability of the application.
