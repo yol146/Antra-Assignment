@@ -1,0 +1,27 @@
+1. Describe the probelm generics address
+generics allows us to create class, interface, or methods that can work with any data type. Instead of 
+defining a method or class for a specific data type, with genenrics, you can define them for any data type 
+that satisfies certain constraints. This allows for greater flexibility and resuability of code. 
+2. How would you create a list of strings, using the generic list class?
+To create a list of strings, we can do this : List<string> mystring = new List<string>();
+3. How many generic type parameters does the Dictionay class have?
+There are tow generic type patameters. The first parameter specifies the type of keys in the dictionary and 
+the second parameter specifies the type of the values associated with those keys.
+4.True/False. When a generic class has multiple type parameters, they must all match 
+Answer: False. They do not have to match. Eatch type parameter can have its own type
+5. What method is used to add items to a List Object?
+Add()
+6.Name two methods that cause items to be removed from a List:
+Remove(): removes the first occurrence of a specified object from the List;
+RemoveAt(): removes the element at the specified index from the List;
+7. How do you indicate that a class has a generic type parameter:
+Usually , the class has a genetic type parameter like this:
+class MyClass<T> 
+8. True/False. Generic classes can only have one generic type parameter.
+False.Generic classes can have multiple generic type parameters.
+9.True/False. Generic type constraints limit what can be used for the generic type.
+True. Generic type constraints allow you to limit the types that can be used for the generic type parameter.
+10. True/False, Constraints let you use the methods of the thing you are constrainning to.
+True. Constraints on a generic type parameter in C# let you specify that the parameter must implement certain 
+interfaces or inherit from certain classes, and this allows you to use the methods of those interfaces or classes
+within your generic class or method.
